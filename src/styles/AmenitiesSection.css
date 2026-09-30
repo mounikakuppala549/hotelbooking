@@ -1,0 +1,130 @@
+.amenities-section {
+  width: 100%;
+}
+
+.amenities-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-main);
+}
+
+.amenity-item__icon {
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenity-item__name {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.amenities-section__btn {
+  border: 1px solid var(--text-main);
+  border-radius: var(--radius-sm);
+  padding: 13px 23px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.amenities-section__btn:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Modal */
+.amenities-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.amenities-modal-content {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  max-width: 780px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-modal);
+  animation: modalIn 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.amenities-modal-header {
+  padding: 20px 24px 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.amenities-modal-close {
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenities-modal-close:hover {
+  background-color: var(--bg-hover);
+}
+
+.amenities-modal-body {
+  padding: 10px 32px 32px;
+  overflow-y: auto;
+}
+
+.amenities-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.amenity-category-block {
+  margin-bottom: 16px;
+}
+
+.amenity-category-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.amenity-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.amenity-modal-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+.amenity-modal-icon {
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

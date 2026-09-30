@@ -1,0 +1,37 @@
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* Two-column layout */
+.listing-layout {
+  display: grid;
+  grid-template-columns: 1fr 370px;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+}
+
+.listing-layout__left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.listing-layout__right {
+  position: relative;
+}
+
+/* Responsive desktop adjustments */
+@media (max-width: 1120px) {
+  .listing-layout {
+    grid-template-columns: 1fr 340px;
+    gap: 40px;
+  }
+}

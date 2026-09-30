@@ -1,0 +1,179 @@
+.photo-tour-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 500;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: tourSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tourSlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.photo-tour-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+
+.photo-tour-back-btn {
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-tour-back-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.photo-tour-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.photo-tour-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.photo-tour-action-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Category Filter Pills */
+.photo-tour-nav {
+  position: sticky;
+  top: 61px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px 24px;
+  z-index: 19;
+}
+
+.photo-tour-nav__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.photo-tour-nav__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-tour-pill {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.photo-tour-pill:hover {
+  background-color: #eaeaea;
+}
+
+.photo-tour-pill--active {
+  background-color: var(--text-main) !important;
+  color: #ffffff !important;
+}
+
+/* Content */
+.photo-tour-content {
+  flex: 1;
+  padding: 40px 24px 80px;
+}
+
+.photo-tour-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.photo-tour-section__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+.photo-tour-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.photo-tour-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.photo-tour-card__img-wrap {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: #f0f0f0;
+  aspect-ratio: 4 / 3;
+}
+
+.photo-tour-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.photo-tour-card__hover-shade {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease;
+}
+
+.photo-tour-card:hover .photo-tour-card__img {
+  transform: scale(1.025);
+}
+
+.photo-tour-card:hover .photo-tour-card__hover-shade {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.photo-tour-card__caption {
+  font-size: 14px;
+  color: var(--text-main);
+  line-height: 1.4;
+}

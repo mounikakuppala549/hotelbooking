@@ -1,0 +1,165 @@
+.highlights {
+  width: 100%;
+}
+
+.highlights__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.highlights__type {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.highlights__specs {
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.highlights__host-badge {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.highlights__host-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlights__superhost-tag {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background-color: var(--airbnb-brand);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+/* Guest Favourite Banner */
+.highlights__favourite-banner {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #ffffff;
+}
+
+.favourite-banner__side--left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.favourite-banner__leaves {
+  font-size: 20px;
+}
+
+.favourite-banner__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.favourite-banner__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.35;
+  padding: 0 8px;
+}
+
+.favourite-banner__side--right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.favourite-banner__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favourite-banner__score {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.favourite-banner__stars {
+  display: flex;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.favourite-banner__reviews-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid var(--border-light);
+  padding-left: 16px;
+}
+
+.count-number {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.count-label {
+  font-size: 12px;
+  text-decoration: underline;
+  color: var(--text-main);
+}
+
+/* Highlights List */
+.highlights__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.highlight-item__icon {
+  color: var(--text-main);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.highlight-item__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.highlight-item__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}

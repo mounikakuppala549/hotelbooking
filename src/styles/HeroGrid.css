@@ -1,0 +1,100 @@
+.hero-grid {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.hero-grid__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  height: 480px;
+}
+
+.hero-grid__item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #ededed;
+}
+
+.hero-grid__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.hero-grid__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease;
+  pointer-events: none;
+}
+
+/* Hover effects */
+.hero-grid:hover .hero-grid__item .hero-grid__overlay {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.hero-grid__item:hover .hero-grid__overlay {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.hero-grid__item:hover .hero-grid__image {
+  transform: scale(1.03);
+}
+
+/* Rounded outer corners for 5-photo grid */
+.hero-grid__item--main {
+  height: 100%;
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.hero-grid__subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  height: 100%;
+}
+
+.hero-grid__item--pos-2 {
+  border-top-right-radius: var(--radius-md);
+}
+
+.hero-grid__item--pos-4 {
+  border-bottom-right-radius: var(--radius-md);
+}
+
+/* Floating "Show all photos" button */
+.hero-grid__show-all-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  z-index: 5;
+}
+
+.hero-grid__show-all-btn:hover {
+  background-color: #f7f7f7;
+  transform: scale(1.03);
+}
+
+.hero-grid__show-all-btn:active {
+  transform: scale(0.97);
+}

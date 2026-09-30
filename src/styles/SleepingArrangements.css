@@ -1,0 +1,48 @@
+.sleeping-arrangements {
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+.sleeping-arrangements__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.sleep-card {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sleep-card__icon {
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.sleep-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.sleep-card__bed-type {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.sleep-card__desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
